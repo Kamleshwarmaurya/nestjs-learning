@@ -8,7 +8,7 @@ export class HolidayList extends BaseEntity {
     @Column()
     holidayName: string;
 
-    @Column()
+    @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP'})
     holidayDate: string;
 
     @Column()

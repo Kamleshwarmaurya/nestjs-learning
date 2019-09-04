@@ -20,6 +20,7 @@ export class HolidayListController {
     CreateHolidayList(
         @Body() createHolidayListDto: CreateHolidayListDto
     ): Promise<HolidayList> {
+        console.log(createHolidayListDto);
         return this.holidayListService.createHolidayList(createHolidayListDto);
     }
 }
